@@ -9,6 +9,7 @@ import com.nursyah.financeapp.ui.theme.FinanceAppTheme
 class MainActivity : ComponentActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
+
     setContent {
       FinanceAppTheme {
         App()
