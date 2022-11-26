@@ -10,6 +10,8 @@ import com.nursyah.financeapp.R
 
 // Set of Material typography styles to start with
 val fontOpenSansLight:FontFamily = FontFamily(Font(R.font.opensans_light))
+val fontOpenSanRegular:FontFamily = FontFamily(Font(R.font.opensans_regular))
+val fontOpenSanMid:FontFamily = FontFamily(Font(R.font.opensans_medium))
 
 val Typography = Typography(
   bodyLarge = TextStyle(

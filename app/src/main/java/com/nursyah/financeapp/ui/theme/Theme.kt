@@ -55,9 +55,16 @@ fun FinanceAppTheme(
       (view.context as Activity).window.statusBarColor = Color(0xFFB4B4B4).toArgb()
 
       if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-        (view.context as Activity).window.statusBarColor = Color.White.toArgb()
-        @Suppress("DEPRECATION")
-        (view.context as Activity).window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+        if(darkTheme){
+          (view.context as Activity).window.statusBarColor = darkColorScheme().background.toArgb()
+        }else{
+          (view.context as Activity).window.statusBarColor = Color.White.toArgb()
+          @Suppress("DEPRECATION")
+          (view.context as Activity).window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+
+        }
+
+
       }
 
 //      @Suppress("DEPRECATION")

@@ -12,6 +12,7 @@ import androidx.compose.ui.graphics.toArgb
 @SuppressLint("CustomSplashScreen") class SplashActivity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
+
     startActivity(Intent(this, MainActivity::class.java))
 
     finish()

@@ -2,6 +2,7 @@ package com.nursyah.financeapp.ui.screen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -10,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
 import com.nursyah.financeapp.R
 import com.nursyah.financeapp.ui.screen.mainscreen.HomeScreen
 import com.nursyah.financeapp.ui.screen.mainscreen.OptionsScreen
@@ -21,9 +23,13 @@ var screen: MainScreenViewModel = MainScreenViewModel()
 fun MainScreen(
   modifier: Modifier = Modifier
 ){
-  HomeScreen(visible = screen.getScreen() == 0)
-  StatsScreen(visible = screen.getScreen() == 1)
-  OptionsScreen(visible = screen.getScreen() == 2)
+  Column(
+    modifier = Modifier.padding(6.dp)
+  ) {
+    HomeScreen(visible = screen.getScreen() == 0)
+    StatsScreen(visible = screen.getScreen() == 1)
+    OptionsScreen(visible = screen.getScreen() == 2)
+  }
 
   Column(
     verticalArrangement = Arrangement.Bottom,

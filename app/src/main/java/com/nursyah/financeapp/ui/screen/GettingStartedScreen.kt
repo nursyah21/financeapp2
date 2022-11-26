@@ -1,5 +1,8 @@
 package com.nursyah.financeapp.ui.screen
 
+import android.app.Activity
+import android.content.Context
+import android.content.Intent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Button
@@ -10,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
@@ -19,15 +23,21 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.nursyah.financeapp.R
+import com.nursyah.financeapp.ui.FinanceAppViewModel
+
 
 @Composable
 fun GettingStartedScreen(
   modifier: Modifier = Modifier
 ){
+  val context = LocalContext.current
+  val activity = context as Activity
   Column(
     verticalArrangement = Arrangement.Center,
     horizontalAlignment = Alignment.CenterHorizontally,
-    modifier = modifier.fillMaxWidth().padding(4.dp)
+    modifier = modifier
+      .fillMaxWidth()
+      .padding(4.dp)
   ) {
     Image(
       painter = painterResource(id = R.drawable.gettingstarted_image),
@@ -40,7 +50,7 @@ fun GettingStartedScreen(
     )
     Spacer(modifier = Modifier.height(24.dp))
     Button(
-      onClick = { /*TODO*/ },
+      onClick = {/*TODO*/},
       elevation = ButtonDefaults.elevatedButtonElevation(3.dp),
       colors = ButtonDefaults.elevatedButtonColors(Color.White),
       contentPadding = PaddingValues(horizontal = 100.dp)

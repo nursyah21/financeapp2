@@ -11,4 +11,7 @@
     <string name="home">Home</string>
     <string name="stats">Stats</string>
     <string name="options">Options</string>
+
+    <string name="shared_preferences">SHARED_PREFERENCES</string>
+    <string name="balance">Balance</string>
 </resources>
